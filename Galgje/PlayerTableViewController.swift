@@ -20,6 +20,7 @@ class PlayerTableViewController : UITableViewController
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -36,7 +37,7 @@ class PlayerTableViewController : UITableViewController
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
         cell.textLabel!.text = users[indexPath.row]
-        cell.detailTextLabel!.text = "Speler"
+        //cell.detailTextLabel!.text = "Speler"
         return cell
     }
     
