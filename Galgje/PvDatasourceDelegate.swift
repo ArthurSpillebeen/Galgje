@@ -21,6 +21,12 @@ class PvDatasourceDelegate: NSObject, UIPickerViewDelegate, UIPickerViewDataSour
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pvData[row]
     }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedLetter = pickerView[row]
+        print(yearValueSelected)
+    }
+    
+    
     func getLetter(index: Int) -> String
     {
         
