@@ -172,10 +172,10 @@
             </objects>
             <point key="canvasLocation" x="61" y="-527"/>
         </scene>
-        <!--View Controller-->
+        <!--Game View Controller-->
         <scene sceneID="OMB-GZ-eeD">
             <objects>
-                <viewController id="zkC-Dq-fMq" customClass="ViewController" customModule="Galgje" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="zkC-Dq-fMq" customClass="GameViewController" customModule="Galgje" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="olV-cT-vKM">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -253,6 +253,9 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="455.5" height="307"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="start.png"/>
+                                                        <connections>
+                                                            <action selector="clickBtnStartGame:" destination="zkC-Dq-fMq" eventType="touchUpInside" id="LFX-tG-knW"/>
+                                                        </connections>
                                                     </button>
                                                     <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BFS-Ee-Zcw">
                                                         <rect key="frame" x="455.5" y="0.0" width="455" height="307"/>
@@ -265,6 +268,9 @@
                                                         <rect key="frame" x="910.5" y="0.0" width="455.5" height="307"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="SPEEL"/>
+                                                        <connections>
+                                                            <action selector="clickBtnPlay:" destination="zkC-Dq-fMq" eventType="touchUpInside" id="feB-kp-Ryx"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -310,7 +316,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="SkQ-Eh-58d"/>
                     <connections>
-                        <outlet property="pvResult" destination="BFS-Ee-Zcw" id="tTZ-bD-eV0"/>
+                        <outlet property="btnPlay" destination="0Pa-Ov-jik" id="djg-VQ-8Tq"/>
+                        <outlet property="btnStartSpel" destination="Vnq-cX-SCC" id="W7U-Qm-3g3"/>
+                        <outlet property="imgGalgje" destination="DI9-0H-yid" id="R2j-Od-WRG"/>
+                        <outlet property="lblHistory" destination="cO8-S9-DZC" id="ETH-n8-dMh"/>
+                        <outlet property="playPicker" destination="BFS-Ee-Zcw" id="Oti-g6-mlM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rg-KM-i0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

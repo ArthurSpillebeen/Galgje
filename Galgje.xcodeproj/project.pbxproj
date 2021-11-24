@@ -14,6 +14,7 @@
 		3E2D6DEE2742ABA800AE8496 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E2D6DED2742ABA800AE8496 /* Assets.xcassets */; };
 		3E2D6DF12742ABA800AE8496 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E2D6DEF2742ABA800AE8496 /* LaunchScreen.storyboard */; };
 		3E2D6DF92742BB3700AE8496 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E2D6DF82742BB3700AE8496 /* PlayerTableViewController.swift */; };
+		3E5C0CDD274E2E1B00C06E71 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5C0CDC274E2E1B00C06E71 /* GameViewController.swift */; };
 		3E8E3C132744F1A800CDDE1F /* PvDatasourceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8E3C122744F1A800CDDE1F /* PvDatasourceDelegate.swift */; };
 		3E8E3C272744FDF200CDDE1F /* galgje10.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E3C1A2744FDF200CDDE1F /* galgje10.png */; };
 		3E8E3C282744FDF200CDDE1F /* galgje7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E8E3C1B2744FDF200CDDE1F /* galgje7.png */; };
@@ -41,6 +42,7 @@
 		3E2D6DF02742ABA800AE8496 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3E2D6DF22742ABA800AE8496 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3E2D6DF82742BB3700AE8496 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
+		3E5C0CDC274E2E1B00C06E71 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		3E8E3C122744F1A800CDDE1F /* PvDatasourceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PvDatasourceDelegate.swift; sourceTree = "<group>"; };
 		3E8E3C1A2744FDF200CDDE1F /* galgje10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galgje10.png; sourceTree = "<group>"; };
 		3E8E3C1B2744FDF200CDDE1F /* galgje7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = galgje7.png; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 			children = (
 				3E8E3C172744FDBF00CDDE1F /* images */,
 				3E2D6DE42742ABA600AE8496 /* AppDelegate.swift */,
+				3E5C0CDC274E2E1B00C06E71 /* GameViewController.swift */,
 				3E2D6DE62742ABA600AE8496 /* SceneDelegate.swift */,
 				3E2D6DE82742ABA600AE8496 /* ViewController.swift */,
 				3E2D6DEA2742ABA600AE8496 /* Main.storyboard */,
@@ -207,6 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E5C0CDD274E2E1B00C06E71 /* GameViewController.swift in Sources */,
 				3E8E3C132744F1A800CDDE1F /* PvDatasourceDelegate.swift in Sources */,
 				3E8E3C35274500EE00CDDE1F /* GalgjeEngine.swift in Sources */,
 				3E2D6DE92742ABA600AE8496 /* ViewController.swift in Sources */,
