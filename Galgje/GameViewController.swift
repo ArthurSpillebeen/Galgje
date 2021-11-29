@@ -14,8 +14,9 @@ class GameViewController: UIViewController {
     @IBOutlet weak var btnStartSpel: UIButton!
     @IBOutlet weak var imgGalgje: UIImageView!
     @IBOutlet weak var lblHistory: UILabel!
+    @IBOutlet weak var TV_History: UITextView!
     
-    var galgjeSpel : GalgjeEngine? = nil
+    var galgjeSpel : GalgjeEngine?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,13 +29,43 @@ class GameViewController: UIViewController {
         var result = PvDatasourceDelegate.getLetter(playPicker.delegate as! PvDatasourceDelegate)(index: index)
        
         var speelinfo = galgjeSpel?.speel(letter: result)
-        imgGalgje.image = (UIImage)(named:speelinfo!.image)
+        var galgjeImage = (UIImage)(named:speelinfo!.image)
+        imgGalgje.image = galgjeImage
         var word = ""
         for letter in speelinfo!.woordArray
+        
         {
-            word += letter
+            word += letter+" "
+            
         }
-        lblHistory.text! += word
+        
+        TV_History.text! += " \n " + word
+        if(speelinfo!.correct)
+        {
+            let wrongAttempts = speelinfo?.numberOfWrongAttempts
+            let winAlert = UIAlertController(title: "Gewonnen", message: "Geef hieronder uw naam in", preferredStyle: UIAlertController.Style.alert);
+            winAlert.addTextField { (textField) in textField.text = ""}
+            let OK = UIAlertAction(title: "Opslaan", style: .default) { [self] (alertAction) in
+                    let textField = winAlert.textFields![0] as UITextField
+                    let naam = textField.text?.count
+                    if naam != 0 {
+                        
+                        
+                        
+                    
+                        
+                        
+                     
+                    }
+                    else {
+                        
+                        
+                    
+                    
+                }
+            }
+            
+        }
         
         
         
@@ -48,13 +79,20 @@ class GameViewController: UIViewController {
         
         let OK = UIAlertAction(title: "OK", style: .default) { [self] (alertAction) in
                 let textField = instellenWoord.textFields![0] as UITextField
-                
-                if textField.text?.count == 6 {
+            let woordTekens = textField.text?.count
+            
+                if woordTekens == 6 {
+                    
                     galgjeSpel = (GalgjeEngine(newWord: textField.text!) )
+                    print(galgjeSpel?.word,galgjeSpel?.currImage)
+                
+                    
                     
                  
                 }
-            else {
+                else {
+                    
+                    
                 
                 
             }

@@ -16,7 +16,7 @@ class GalgjeEngine {
     var woordArray: [String]
     
     init(newWord : String) {
-        word = newWord
+        word = newWord.uppercased()
         wrongAttempts = 0
         Attempts = 0;
         foundLetters = []
@@ -51,7 +51,8 @@ class GalgjeEngine {
     func speel(letter:String) -> (correct: Bool, numberOfWrongAttempts:
          Int, woordArray: [String], image:String)
     {
-        var doesWordContainLetter = word.contains(letter)
+        
+        var doesWordContainLetter = self.word.contains(letter)
         
         
         
@@ -85,16 +86,23 @@ class GalgjeEngine {
             var i = 0;
             while(i < getWoord().count)
             {
-                if(Array(arrayLiteral: getWoord())[i] == letter)
+                var charactersOfWord = word.map { String($0) }
+                if(charactersOfWord[i] == letter)
                 {
                     indexsOfWord.append(i)
                 }
+                i += 1 ;
             }
             //toevoegen letters in woordarray
-            for indexOfletter in woordArray
+            
+            for indexWord in indexsOfWord
             {
-                woordArray[Int(indexOfletter)!] == letter
+                woordArray[indexWord] = letter
             }
+        }
+        else
+        {
+            wrongAttempts += 1;
         }
         
         
@@ -109,8 +117,16 @@ class GalgjeEngine {
             }
         }
         Attempts += 1
-        currImage = "galgje"+String(wrongAttempts)
-        return (isCorrect,getMawWrongAttemps(),foundLetters,currImage)
+        if(getMawWrongAttemps() == 0)
+        {
+            currImage = "galgje"
+        }
+        else
+        {
+            currImage = "galgje"+String(wrongAttempts)
+        }
+        
+        return (isCorrect,getMawWrongAttemps(),woordArray,currImage)
     
         
     }

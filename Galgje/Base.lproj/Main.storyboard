@@ -221,26 +221,28 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q00-Ph-Uco">
                                         <rect key="frame" x="0.0" y="307" width="1366" height="307.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="galgje1.png" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-0H-yid">
-                                                <rect key="frame" x="0.0" y="0.0" width="410" height="307.5"/>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-0H-yid">
+                                                <rect key="frame" x="0.0" y="0.0" width="478" height="307.5"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="_ _ _ _ _ _" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cO8-S9-DZC">
-                                                <rect key="frame" x="410" y="0.0" width="956" height="307.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="45"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="_ _ _ _ _ _" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rbr-bu-fMh">
+                                                <rect key="frame" x="478" y="0.0" width="888" height="307.5"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
-                                            <constraint firstItem="DI9-0H-yid" firstAttribute="top" secondItem="q00-Ph-Uco" secondAttribute="top" id="5Rl-L0-3En"/>
-                                            <constraint firstItem="cO8-S9-DZC" firstAttribute="height" secondItem="q00-Ph-Uco" secondAttribute="height" id="KOT-YS-KRn"/>
-                                            <constraint firstItem="cO8-S9-DZC" firstAttribute="top" secondItem="q00-Ph-Uco" secondAttribute="top" id="NFD-OE-IqI"/>
-                                            <constraint firstItem="DI9-0H-yid" firstAttribute="width" secondItem="q00-Ph-Uco" secondAttribute="width" multiplier="0.3" id="ORl-Gb-WX1"/>
-                                            <constraint firstItem="cO8-S9-DZC" firstAttribute="width" secondItem="q00-Ph-Uco" secondAttribute="width" multiplier="0.7" id="aoC-wH-Zms"/>
-                                            <constraint firstItem="DI9-0H-yid" firstAttribute="leading" secondItem="q00-Ph-Uco" secondAttribute="leading" id="eth-39-gSI"/>
-                                            <constraint firstItem="DI9-0H-yid" firstAttribute="height" secondItem="q00-Ph-Uco" secondAttribute="height" id="hgM-UZ-4HG"/>
-                                            <constraint firstItem="cO8-S9-DZC" firstAttribute="leading" secondItem="DI9-0H-yid" secondAttribute="trailing" id="rMU-gK-QEf"/>
+                                            <constraint firstItem="DI9-0H-yid" firstAttribute="width" secondItem="q00-Ph-Uco" secondAttribute="width" multiplier="0.35" id="1X7-pE-4MX"/>
+                                            <constraint firstItem="rbr-bu-fMh" firstAttribute="top" secondItem="q00-Ph-Uco" secondAttribute="top" id="2Ft-EU-FAQ"/>
+                                            <constraint firstItem="DI9-0H-yid" firstAttribute="height" secondItem="q00-Ph-Uco" secondAttribute="height" id="2Q2-za-eA5"/>
+                                            <constraint firstItem="DI9-0H-yid" firstAttribute="top" secondItem="q00-Ph-Uco" secondAttribute="top" id="FLA-Ws-i2R"/>
+                                            <constraint firstItem="rbr-bu-fMh" firstAttribute="height" secondItem="q00-Ph-Uco" secondAttribute="height" id="FOG-Ev-9JH"/>
+                                            <constraint firstItem="DI9-0H-yid" firstAttribute="leading" secondItem="q00-Ph-Uco" secondAttribute="leading" id="NwC-qT-wak"/>
+                                            <constraint firstItem="DI9-0H-yid" firstAttribute="top" secondItem="q00-Ph-Uco" secondAttribute="top" id="Ury-xk-zj3"/>
+                                            <constraint firstItem="rbr-bu-fMh" firstAttribute="leading" secondItem="DI9-0H-yid" secondAttribute="trailing" id="XXi-S6-Nfp"/>
+                                            <constraint firstItem="rbr-bu-fMh" firstAttribute="width" secondItem="q00-Ph-Uco" secondAttribute="width" multiplier="0.65" id="kSI-4e-d6L"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYN-XQ-fnd">
@@ -316,22 +318,24 @@
                     </view>
                     <navigationItem key="navigationItem" id="SkQ-Eh-58d"/>
                     <connections>
+                        <outlet property="TV_History" destination="rbr-bu-fMh" id="suP-oA-PAh"/>
                         <outlet property="btnPlay" destination="0Pa-Ov-jik" id="djg-VQ-8Tq"/>
                         <outlet property="btnStartSpel" destination="Vnq-cX-SCC" id="W7U-Qm-3g3"/>
                         <outlet property="imgGalgje" destination="DI9-0H-yid" id="R2j-Od-WRG"/>
-                        <outlet property="lblHistory" destination="cO8-S9-DZC" id="ETH-n8-dMh"/>
                         <outlet property="playPicker" destination="BFS-Ee-Zcw" id="Oti-g6-mlM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Rg-KM-i0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <customObject id="y8V-Bl-fU4" customClass="PvDatasourceDelegate" customModule="Galgje" customModuleProvider="target"/>
             </objects>
-            <point key="canvasLocation" x="-560" y="28"/>
+            <point key="canvasLocation" x="-560.02928257686676" y="27.5390625"/>
         </scene>
     </scenes>
     <resources>
-        <image name="galgje1.png" width="42.75" height="51"/>
         <image name="start.png" width="180" height="125"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
