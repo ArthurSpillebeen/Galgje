@@ -100,7 +100,7 @@
         <!--Root View Controller-->
         <scene sceneID="Fm0-eo-ZGw">
             <objects>
-                <tableViewController id="MOR-PU-ksp" sceneMemberID="viewController">
+                <tableViewController id="MOR-PU-ksp" customClass="PlayerTableViewController" customModule="Galgje" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="0rN-qY-1Ys">
                         <rect key="frame" x="0.0" y="0.0" width="1366" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -224,7 +224,7 @@
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DI9-0H-yid">
                                                 <rect key="frame" x="0.0" y="0.0" width="478" height="307.5"/>
                                             </imageView>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="_ _ _ _ _ _" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rbr-bu-fMh">
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="_ _ _ _ _ _" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rbr-bu-fMh">
                                                 <rect key="frame" x="478" y="0.0" width="888" height="307.5"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <color key="textColor" systemColor="labelColor"/>

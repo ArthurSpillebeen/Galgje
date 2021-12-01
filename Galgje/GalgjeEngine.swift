@@ -81,24 +81,30 @@ class GalgjeEngine {
         
         if(doesWordContainLetter)
         {
-            //indexen van letter in woord
-            var indexsOfWord : [Int] = []
-            var i = 0;
-            while(i < getWoord().count)
+            if(!foundLetters.contains(letter))
             {
-                var charactersOfWord = word.map { String($0) }
-                if(charactersOfWord[i] == letter)
+                foundLetters.append(letter);
+                //indexen van letter in woord
+                var indexsOfWord : [Int] = []
+                var i = 0;
+                while(i < getWoord().count)
                 {
-                    indexsOfWord.append(i)
+                    var charactersOfWord = word.map { String($0) }
+                    if(charactersOfWord[i] == letter)
+                    {
+                        indexsOfWord.append(i)
+                    }
+                    i += 1 ;
                 }
-                i += 1 ;
+                //toevoegen letters in woordarray
+                
+                for indexWord in indexsOfWord
+                {
+                    woordArray[indexWord] = letter
+                }
             }
-            //toevoegen letters in woordarray
             
-            for indexWord in indexsOfWord
-            {
-                woordArray[indexWord] = letter
-            }
+            
         }
         else
         {

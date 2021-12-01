@@ -10,8 +10,15 @@ import UIKit
 
 class PlayerTableViewController : UITableViewController
 {
-    var users = ["Frank","Jozef"]
     
+    var users = ["Marc": 4,
+                 "Dirk": 5]
+    var highScores : [String] = [];
+    
+    for name in users.keys
+    {
+        highScores.append(name+" - " + users[name])
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -36,8 +43,8 @@ class PlayerTableViewController : UITableViewController
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
 
-        cell.textLabel!.text = users[indexPath.row]
-        //cell.detailTextLabel!.text = "Speler"
+        cell.textLabel!.text = highScores[indexPath.row]
+        
         return cell
     }
     

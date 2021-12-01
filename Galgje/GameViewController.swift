@@ -49,6 +49,8 @@ class GameViewController: UIViewController {
                     let textField = winAlert.textFields![0] as UITextField
                     let naam = textField.text?.count
                     if naam != 0 {
+                        var userScore = String(naam!) + " - " + String(wrongAttempts!)
+                        (self.navigationController?.viewControllers[0] as! ProtocolRVC).addUsers(user: userScore)
                         
                         
                         
@@ -65,6 +67,23 @@ class GameViewController: UIViewController {
                 }
             }
             
+            winAlert.addAction(OK)
+            self.present(winAlert, animated: true, completion: nil)
+            
+        }
+        if(speelinfo!.numberOfWrongAttempts >= 11)
+        {
+            let lostAlert = UIAlertController(title: "Verloren", message: "Galgje verloren", preferredStyle: UIAlertController.Style.alert);
+            
+            let OK = UIAlertAction(title: "ok", style: .default) { [self] (alertAction) in
+                    galgjeSpel = nil
+                    imgGalgje.image = (UIImage)(named:"")
+                    TV_History.text! = "_ _ _ _ _ _"
+                    
+            }
+            
+            lostAlert.addAction(OK)
+            self.present(lostAlert, animated: true, completion: nil)
         }
         
         
